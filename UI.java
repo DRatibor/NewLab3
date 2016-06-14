@@ -6,33 +6,33 @@ import javax.swing.*;
 
 public class UI {
 
-	// компоненты интерфейса
-	JFrame frame; // фрейм
-	JButton groupsManagementButton; // кнопка открывает меню добавления/удаления
-									// и редактирования групп
-	JButton goodsManagementButton; // кнопка открывает меню поступления/списания
-									// и редактирования товаров
-	JButton statisticsWindowButton; // кнопка открывает меню статистики
-	JTextField searchFormTextField; // форма поиска товаров
-	JButton changesConfirmationButton; // кнопка подтверждающая изменения в
-										// таблице
-	JList<?> groupsList; // список групп товаров
-	JLabel currentGroupLabel; // надпись отображает текущую выбраную группу
-	JLabel totalLabel; // надпись "Загалом:" внизу формы
-	JTable goodsOfGroupTable; // центральная таблица со списком товаров группы
-	JTextField totalPriceTextField; // форма отображения суммарной цены товаров
-									// группы
-	JTextField totalQuantityTextField; // форма отображения суммарного
-										// количества товаров группы
+	// РєРѕРјРїРѕРЅРµРЅС‚С‹ РёРЅС‚РµСЂС„РµР№СЃР°
+	JFrame frame; // С„СЂРµР№Рј
+	JButton groupsManagementButton; // РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РґРѕР±Р°РІР»РµРЅРёСЏ/СѓРґР°Р»РµРЅРёСЏ
+									// Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РіСЂСѓРїРї
+	JButton goodsManagementButton; // РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ/СЃРїРёСЃР°РЅРёСЏ
+									// Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ С‚РѕРІР°СЂРѕРІ
+	JButton statisticsWindowButton; // РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ СЃС‚Р°С‚РёСЃС‚РёРєРё
+	JTextField searchFormTextField; // С„РѕСЂРјР° РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ
+	JButton changesConfirmationButton; // РєРЅРѕРїРєР° РїРѕРґС‚РІРµСЂР¶РґР°СЋС‰Р°СЏ РёР·РјРµРЅРµРЅРёСЏ РІ
+										// С‚Р°Р±Р»РёС†Рµ
+	JList<?> groupsList; // СЃРїРёСЃРѕРє РіСЂСѓРїРї С‚РѕРІР°СЂРѕРІ
+	JLabel currentGroupLabel; // РЅР°РґРїРёСЃСЊ РѕС‚РѕР±СЂР°Р¶Р°РµС‚ С‚РµРєСѓС‰СѓСЋ РІС‹Р±СЂР°РЅСѓСЋ РіСЂСѓРїРїСѓ
+	JLabel totalLabel; // РЅР°РґРїРёСЃСЊ "Р—Р°РіР°Р»РѕРј:" РІРЅРёР·Сѓ С„РѕСЂРјС‹
+	JTable goodsOfGroupTable; // С†РµРЅС‚СЂР°Р»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° СЃРѕ СЃРїРёСЃРєРѕРј С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
+	JTextField totalPriceTextField; // С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕР№ С†РµРЅС‹ С‚РѕРІР°СЂРѕРІ
+									// РіСЂСѓРїРїС‹
+	JTextField totalQuantityTextField; // С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕРіРѕ
+										// РєРѕР»РёС‡РµСЃС‚РІР° С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 
 	UI() {
 		JFrame.setDefaultLookAndFeelDecorated(true);
-		frame = new JFrame("Система управління складом");
+		frame = new JFrame("РЎРёСЃС‚РµРјР° СѓРїСЂР°РІР»С–РЅРЅСЏ СЃРєР»Р°РґРѕРј");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new GridBagLayout());
 
-		componentsInitialization();// описываем компоненты
-		componentsPlacing();// размещаем компоненты
+		componentsInitialization();// РѕРїРёСЃС‹РІР°РµРј РєРѕРјРїРѕРЅРµРЅС‚С‹
+		componentsPlacing();// СЂР°Р·РјРµС‰Р°РµРј РєРѕРјРїРѕРЅРµРЅС‚С‹
 		
 		
 		frame.setSize(1000, 600);
@@ -42,68 +42,68 @@ public class UI {
 
 	private void componentsPlacing() {
 
-		// ряд 1
+		// СЂСЏРґ 1
 
-		// кнопка открывает меню добавления/удаления и редактирования групп
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РґРѕР±Р°РІР»РµРЅРёСЏ/СѓРґР°Р»РµРЅРёСЏ Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РіСЂСѓРїРї
 		frame.add(groupsManagementButton, new GridBagConstraints(0, 0, 1, 1, 1,
 				1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// кнопка открывает меню поступления/списания и редактирования товаров
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ/СЃРїРёСЃР°РЅРёСЏ Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ С‚РѕРІР°СЂРѕРІ
 		frame.add(goodsManagementButton, new GridBagConstraints(1, 0, 1, 1, 1,
 				1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// кнопка открывает меню статистики
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ СЃС‚Р°С‚РёСЃС‚РёРєРё
 		frame.add(statisticsWindowButton, new GridBagConstraints(2, 0, 1, 1, 1,
 				1, GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// форма поиска товаров
+		// С„РѕСЂРјР° РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ
 		frame.add(searchFormTextField, new GridBagConstraints(3, 0, 2, 1, 1, 1,
 				GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL,
 				new Insets(5, 2, 2, 2), 0, 0));
 
-		// ряд 2
+		// СЂСЏРґ 2
 
-		// надпись отображает текущую выбраную группу
+		// РЅР°РґРїРёСЃСЊ РѕС‚РѕР±СЂР°Р¶Р°РµС‚ С‚РµРєСѓС‰СѓСЋ РІС‹Р±СЂР°РЅСѓСЋ РіСЂСѓРїРїСѓ
 		frame.add(currentGroupLabel, new GridBagConstraints(0, 1, 1, 4, 1, 1,
 				GridBagConstraints.NORTH, GridBagConstraints.CENTER,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// ряд 3
+		// СЂСЏРґ 3
 
 		// ???????
 
-		// ряд 4
+		// СЂСЏРґ 4
 
-		// список групп товаров
+		// СЃРїРёСЃРѕРє РіСЂСѓРїРї С‚РѕРІР°СЂРѕРІ
 		frame.add(groupsList, new GridBagConstraints(0, 4, 1, 11, 1, 1,
 				GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// центральная таблица со списком товаров группы
+		// С†РµРЅС‚СЂР°Р»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° СЃРѕ СЃРїРёСЃРєРѕРј С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		frame.add(goodsOfGroupTable, new GridBagConstraints(1, 4, 10, 1, 1, 1,
 				GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 2, 2), 0, 0));
 
-		// ряд 5
+		// СЂСЏРґ 5
 
-		// надпись "Загалом:" внизу формы
+		// РЅР°РґРїРёСЃСЊ "Р—Р°РіР°Р»РѕРј:" РІРЅРёР·Сѓ С„РѕСЂРјС‹
 		frame.add(totalLabel, new GridBagConstraints(1, 5, 1, 1, 1, 1,
 				GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 8, 2), 0, 0));
 
-		// форма отображения суммарного количества товаров группы
+		// С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		frame.add(totalQuantityTextField, new GridBagConstraints(2, 5, 1, 1, 1,
 				1, GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 8, 2), 0, 0));
 
-		// форма отображения суммарной цены товаров группы
+		// С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕР№ С†РµРЅС‹ С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		frame.add(totalPriceTextField, new GridBagConstraints(3, 5, 1, 1, 1, 1,
 				GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 8, 2), 0, 0));
-		// кнопка подтверждающая изменения в таблице
+		// РєРЅРѕРїРєР° РїРѕРґС‚РІРµСЂР¶РґР°СЋС‰Р°СЏ РёР·РјРµРЅРµРЅРёСЏ РІ С‚Р°Р±Р»РёС†Рµ
 		frame.add(changesConfirmationButton, new GridBagConstraints(4, 5, 1, 1,
 				1, 1, GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
 				new Insets(2, 2, 5, 2), 0, 0));
@@ -112,45 +112,41 @@ public class UI {
 
 	private void componentsInitialization() {
 
-		// кнопка открывает меню добавления/удаления и редактирования групп
-		groupsManagementButton = new JButton("Редагування групп");
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РґРѕР±Р°РІР»РµРЅРёСЏ/СѓРґР°Р»РµРЅРёСЏ Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РіСЂСѓРїРї
+		groupsManagementButton = new JButton("Р РµРґР°РіСѓРІР°РЅРЅСЏ РіСЂСѓРїРї");
 
-		// кнопка открывает меню поступления/списания и редактирования товаров
-		goodsManagementButton = new JButton("Додати/списати товар");
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ/СЃРїРёСЃР°РЅРёСЏ Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ С‚РѕРІР°СЂРѕРІ
+		goodsManagementButton = new JButton("Р”РѕРґР°С‚Рё/СЃРїРёСЃР°С‚Рё С‚РѕРІР°СЂ");
 
-		// кнопка открывает меню статистики
-		statisticsWindowButton = new JButton("Статистика");
+		// РєРЅРѕРїРєР° РѕС‚РєСЂС‹РІР°РµС‚ РјРµРЅСЋ СЃС‚Р°С‚РёСЃС‚РёРєРё
+		statisticsWindowButton = new JButton("РЎС‚Р°С‚РёСЃС‚РёРєР°");
 
-		// форма поиска товаров
+		// С„РѕСЂРјР° РїРѕРёСЃРєР° С‚РѕРІР°СЂРѕРІ
 		searchFormTextField = new JTextField();
-		searchFormTextField.setText("пошук товарів");
+		searchFormTextField.setText("РїРѕС€СѓРє С‚РѕРІР°СЂС–РІ");
 
-		// надпись отображает текущую выбраную группу
-		currentGroupLabel = new JLabel("ВСТАВИТЬ НАЗВАНИЕ ТЕКУЩЕЙ ГРУППЫ ТОВАРОВ");
+		// РЅР°РґРїРёСЃСЊ РѕС‚РѕР±СЂР°Р¶Р°РµС‚ С‚РµРєСѓС‰СѓСЋ РІС‹Р±СЂР°РЅСѓСЋ РіСЂСѓРїРїСѓ
+		currentGroupLabel = new JLabel("Р’РЎРўРђР’РРўР¬ РќРђР—Р’РђРќРР• РўР•РљРЈР©Р•Р™ Р“Р РЈРџРџР« РўРћР’РђР РћР’");
 		
-		// список групп товаров
+		// СЃРїРёСЃРѕРє РіСЂСѓРїРї С‚РѕРІР°СЂРѕРІ
 		groupsList = new JList();
 
-		// центральная таблица со списком товаров группы
+		// С†РµРЅС‚СЂР°Р»СЊРЅР°СЏ С‚Р°Р±Р»РёС†Р° СЃРѕ СЃРїРёСЃРєРѕРј С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		goodsOfGroupTable = new JTable();
 
-		// надпись "Загалом:" внизу формы
-		totalLabel = new JLabel("Загалом: ");
+		// РЅР°РґРїРёСЃСЊ "Р—Р°РіР°Р»РѕРј:" РІРЅРёР·Сѓ С„РѕСЂРјС‹
+		totalLabel = new JLabel("Р—Р°РіР°Р»РѕРј: ");
 
-		// форма отображения суммарного количества товаров группы
+		// С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		totalQuantityTextField = new JTextField();
-		totalQuantityTextField.setText("КОЛИЧЕСТВО ТОВАРОВ");
+		totalQuantityTextField.setText("РљРћР›РР§Р•РЎРўР’Рћ РўРћР’РђР РћР’");
 
-		// форма отображения суммарной цены товаров группы
+		// С„РѕСЂРјР° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃСѓРјРјР°СЂРЅРѕР№ С†РµРЅС‹ С‚РѕРІР°СЂРѕРІ РіСЂСѓРїРїС‹
 		totalPriceTextField = new JTextField();
-		totalPriceTextField.setText("ЦЕНА ТОВАРОВ");
+		totalPriceTextField.setText("Р¦Р•РќРђ РўРћР’РђР РћР’");
 
-		// кнопка подтверждающая изменения в таблице
-		changesConfirmationButton = new JButton("Підтвердити");
+		// РєРЅРѕРїРєР° РїРѕРґС‚РІРµСЂР¶РґР°СЋС‰Р°СЏ РёР·РјРµРЅРµРЅРёСЏ РІ С‚Р°Р±Р»РёС†Рµ
+		changesConfirmationButton = new JButton("РџС–РґС‚РІРµСЂРґРёС‚Рё");
 
-	}
-
-	public static void main(String[] args) {
-		UI ui = new UI();
 	}
 }
